@@ -1,0 +1,156 @@
+body {
+    background-color: aliceblue;
+    font-size: 15px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 1rem;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+#cardapio {
+    background-color: black;
+    height: 25rem;
+    width: 25rem;
+    padding: 0.5rem;
+    color: #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+}
+
+#menu {
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+    background-color: rgb(142, 190, 233);
+    height: 60%;
+    width: 30%;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: red;
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;
+    color: white;
+}
+
+.form-models{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.form-models .metodo {
+    text-align: center;
+}
+
+label {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    margin-left: 0;
+    font-weight: bold;
+}
+
+input {
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+select {
+    padding: 0.3rem;
+    width: 5rem;
+    margin: auto;
+}
+
+button {
+    width: 50%;
+    padding: 0.6rem;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: auto;
+    margin-top: 1.3rem;
+}
+
+button:hover {
+    background-color: rgb(245, 74, 74);
+    cursor: pointer;
+}
+
+#container-resultado {
+    height: 25rem;
+    width: 25rem;
+    padding: 0.5rem;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+#resultado {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 100%;
+}
+
+#valor {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 3rem;
+    background-color: green;
+    width: 15rem;
+    border-radius: 3rem;
+    text-align: center;
+}
+
+.OBS {
+    color: black;
+    font-size: 1.4rem;
+}

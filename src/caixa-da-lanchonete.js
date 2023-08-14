@@ -1,4 +1,4 @@
-import cardapio from "./cardapio";
+import cardapio from "./cardapio.js";
 
 class CaixaDaLanchonete {
 
@@ -23,16 +23,16 @@ class CaixaDaLanchonete {
             const pedido = cardapio.find(item => item.codigo === codigo);
 
             if (!pedido) {
-                 return mensagensDeErro.push('Item inválido!');
-            } else if(quantidade <= 0) {
+                return mensagensDeErro.push('Item inválido!');
+            } else if (quantidade <= 0) {
                 return mensagensDeErro.push('Quantidade inválida!');
             } else {
                 // Verificando se o item extra precisa do item principal
-                if(pedido.extra) {
+                if (pedido.extra) {
                     const pedidoPrincipal = pedido.extraDo;
                     const principalNoCarrinho = itens.some(item => item.startsWith(pedidoPrincipal));
 
-                    if(!principalNoCarrinho) {
+                    if (!principalNoCarrinho) {
                         return mensagensDeErro.push('Item extra não pode ser pedido sem o principal');
                     }
                 }
@@ -42,9 +42,9 @@ class CaixaDaLanchonete {
         })
 
         // Aplicando desconto ou acréscimo conforme o método de pagamento
-        if(metodoDePagamento === 'dinheiro') {
+        if (metodoDePagamento === 'dinheiro') {
             valorTotal *= desconto;
-        } else if(metodoDePagamento === 'credito') {
+        } else if (metodoDePagamento === 'credito') {
             valorTotal *= acrescimo;
         }
 
@@ -57,6 +57,6 @@ class CaixaDaLanchonete {
         return 'R$ ' + valorTotal.toFixed(2).replace('.', ',');
 
     }
-
 }
-export { CaixaDaLanchonete };
+
+export default CaixaDaLanchonete;

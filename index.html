@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/styles.css">
+    <title>Lanchonete</title>
+</head>
+
+<body>
+    <header>
+        <h1>Lanchonete</h1>
+    </header>
+    <div id="menu">
+        <div id="cardapio">
+            <h2>CARDAPIO</h2>
+            <table>
+                <tr>
+                    <th>CÓDIGO</th>
+                    <th>DESCRIÇÃO</th>
+                    <th>VALOR</th>
+                </tr>
+                <tr>
+                    <td>cafe</td>
+                    <td>Café</td>
+                    <td>R$ 3,00</td>
+                </tr>
+                <tr>
+                    <td>chantily</td>
+                    <td>Chantily (extra do Café)</td>
+                    <td>R$ 1,50</td>
+                </tr>
+                <tr>
+                    <td>suco</td>
+                    <td>Suco Natural</td>
+                    <td>R$ 6,20</td>
+                </tr>
+                <tr>
+                    <td>sanduiche</td>
+                    <td>Sanduíche</td>
+                    <td>R$ 6,50</td>
+                </tr>
+                <tr>
+                    <td>queijo</td>
+                    <td>Queijo (extra do Sanduíche)</td>
+                    <td>R$ 2,00</td>
+                </tr>
+                <tr>
+                    <td>salgado</td>
+                    <td>Salgado</td>
+                    <td>R$ 7,25</td>
+                </tr>
+                <tr>
+                    <td>combo1</td>
+                    <td>1 Suco e 1 Sanduíche</td>
+                    <td>R$ 9,50</td>
+                </tr>
+                <tr>
+                    <td>combo2</td>
+                    <td>1 Café e 1 Sanduíche</td>
+                    <td>R$ 7,50</td>
+                </tr>
+            </table>
+        </div>
+        <form id="form">
+            <h2>PEDIDO</h2>
+            <div class="form-models">
+                <label for="codigoQuantidade">Código</label>
+                <input type="text" id="codigo" name="codigo">
+
+                <label for="codigoQuantidade">Quantidade</label>
+                <input type="text" id="quantidade" name="quantidade">
+
+                <label class="metodo" for="metodo">Método de pagamento</label>
+                <select id="metodo" name="metodo">
+                    <option value="debito">Débito</option>
+                    <option value="credito">Crédito</option>
+                    <option value="dinheiro">Dinheiro</option>
+                </select>
+
+                <button type="button" id="calcular-btn">Calcular</button>
+            </div>
+        </form>
+        <div id="container-resultado">
+            <div id="resultado">
+                <p class="OBS">OBS: Coloque apenas um código por vez!
+                    Exemplo: Código: cafe | Quantidade: 1
+                </p>
+                <p id="valor"></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+
+</html>
